@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        mark { 
+          background-color: red;
+          color: white;
+          display: flex;
+          justify-content: center;
+        }
+        body {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        form {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+        }
+        fieldset {
+            display: flex;
+            flex-direction: column;
+        }
+        input {
+            outline: 0;
+            border-width: 0 0 2px;
+            border-color: black;
+            font-style: italic;
+        }
+        .inline {
+            display: inline;
+        }
+        label {
+            display: inline-block;
+            margin-left: 20px;
+            margin-right: 20px;
+            /* width: 6em;
+            margin-right: .5em;
+            padding-top: 1.5em; */
+        }
+        </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <mark>
+                Yes! I want to subscribe to Mag-O-Zine
+            </mark>
+            <div class="inline">
+                <label style="width: 41.5%;"><input style="width: 100%;" type="text" /><br>First Name</label>
+                <label style="width: 41.5%;"><input style="width: 100%;" type="text" /><br>Last Name</label>
+            </div>
+            <div class="inline">
+                <label style="width: 90%;"><input style="width: 100%;" type="text" /><br>Address</label>
+            </div>
+            <div class="inline">
+                <label style="width: 25.5%;"><input style="width: 100%;" type="text" /><br>City</label>
+                <label style="width: 25.5%;"><input style="width: 100%;" type="text" /><br>State</label>
+                <label style="width: 25.5%;"><input style="width: 100%;" type="text" /><br>Zip</label>
+            </div>
+            <div class="inline" style="margin-top: 10px">
+                <label>Subscribe for:</label>
+                <input type="checkbox" id="period1" name="period" value="1" checked>
+                <label style="margin-left: 0" id="period1"> 1 Year ($19.95) </label>
+                <input type="checkbox" id="period2" name="period" value="2">
+                <label style="margin-left: 0"for="period2"> 2 Years ($35.00) </label>
+            </div>
+            <div>
+                <label style="margin-top: 10px; margin-bottom: 10px;">Send me more information about:</label>
+            </div>
+            <div>
+                <div style="margin-left: 20px">
+                    <input type="checkbox" id="zone1" name="zone" value="computer" checked>
+                    <label style="margin-left: 0" for="zone1"> Computer-Zine </label>
+                </div>
+                <div style="margin-left: 20px">
+                    <input type="checkbox" id="zone2" name="zone" value="computer" >
+                    <label style="margin-left: 0" for="zone2"> Fishing-Zine </label>
+                </div>
+                <div style="margin-left: 20px">
+                    <input type="checkbox" id="zone3" name="zone" value="computer" checked>
+                    <label style="margin-left: 0" for="zone3"> Cat-O-Zine </label>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+</body>
+</html>
