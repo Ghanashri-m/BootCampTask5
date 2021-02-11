@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pan card Document</title>
+    <style>
+        body {
+          display: flex;
+          justify-content: center;
+        }
+        .container {
+          width: 80%;
+          position: absolute;
+          min-height: 100%;
+          /* border: 1px solid black; */
+          background-color:#fff8c4;
+        }
+        .header {
+          width: 100%;
+          background-color: #8a0019;
+          height: 40px;
+          text-align: center;
+        }
+        p {
+            margin: 0;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 2% 98%;
+        }
+        .grid-item {
+            border: 1px solid rgba(0, 0, 0, 0.8);
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .leftPadding {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+        <p style="color:white; font-weight: bold;">
+            Request For New PAN Card Or/And Changes Or Correction In PAN Data
+        </p>
+        <p style="color:white; font-style: italic;">
+            Fields marked with 
+            <span style="color:red">*</span> (asterisk) are mandatory. To avoid mistake(s), please refer
+            <a style="color:orange" href="">guidelines</a> and
+            <a style="color:orange" href="">instructions</a>.
+        </p>
+    </div>
+    <div class="grid-container">
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <span style="color:red">*</span>
+            <span class="bold">Whether citizen of India</span>
+            <label style="padding-left: 60px" name="citizen" for="citizen" value="Yes">Yes</label>
+            <input type="radio" for="citizen", name="citizen">
+            <label class="leftPadding" name="citizen" for="citizen" value="No">No</label>
+            <input type="radio" for="citizen", name="citizen" />
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <span style="color:red">*</span>
+            <label for="pan", name="pan" class="bold">Permanent Account Number (PAN)</label>
+            <input type="text" for="pan", name="pan" />
+        </div>
+        <div class="grid-item">
+            <input type="checkbox" for="name" />
+        </div>
+        <div class="grid-item">
+            <span style="color:red">*</span>
+            <span class="bold">1. Name</span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <span class="bold">Title</span>
+            <label class="leftPadding" for="label1" name="title">Shri/Mr</label>
+            <input type="radio" for="label1", name="title" />
+            <label class="leftPadding" for="label2" name="title">Smt./Mrs.</label>
+            <input type="radio" for="label2", name="title" />
+            <label class="leftPadding" for="label3" name="title">Kumar/Ms</label>
+            <input type="radio" for="label3", name="title" />
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span>
+                <div class="bold">Last Name/Surname</div>
+                <input type="text" for="lname", name="name" />
+            </span>
+            <span style="padding-left: 20%;">
+                <div class="bold">First Name</div>
+                <input type="text" for="fname", name="name" />
+            </span>
+            <span style="padding-left: 20%;">
+                <div class="bold">Middle Name</div>
+                <input type="text" for="mname", name="name" />
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <span style="color:red">*</span>
+            <span class="bold">Name as you would like it printed on the card</span>
+            <span style="color: blue"> (Prefix like Shri, Smt, Kumari, Late, Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed</span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <input style="width: 20%" type="text" for="fullname", name="fullname" />
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <span class="bold">Details of Parents</span>
+            <span style="color: blue"> (Prefix like Shri, Smt, Kumari, Late, Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed</span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span class="bold" style="padding-right: 20px; width: 50%; border-right: 1px solid black;">
+                Whether mother is single parent and you wish to apply for PAN by furnishing the name of your
+            </br> mother only
+            </span>
+            <span class="leftPadding">
+                <label name="choice1" for="choice" value="Yes">Yes</label>
+                <input type="radio" for="choice1", name="choice">
+                <label class="leftPadding" name="choice" for="choice2" value="No">No</label>
+                <input type="radio" for="choice2", checked name="choice" />
+            </span>
+        </div>
+        <div class="grid-item">
+            <input type="checkbox" for="name" />
+        </div>
+        <div class="grid-item">
+            <span style="color:red">*</span>
+            <span class="bold">Father's name</span>
+            <span style="color: blue">(Mandatory field. Even married women should give father's name only.)</span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <div class="grid-item" style="display: flex;">
+                <span>
+                    <div class="bold">Last Name/Surname</div>
+                    <input type="text" for="lname", name="name" />
+                </span>
+                <span style="padding-left: 20%;">
+                    <div class="bold">First Name</div>
+                    <input type="text" for="fname", name="name" />
+                </span>
+                <span style="padding-left: 20%;">
+                    <div class="bold">Middle Name</div>
+                    <input type="text" for="mname", name="name" />
+                </span>
+            </div>
+        </div>
+        <div class="grid-item">
+            <input type="checkbox">
+        </div>
+        <div class="grid-item">
+            <span style="color: blue">Mother's Name(This field is optional.)</span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <div class="grid-item" style="display: flex;">
+                <span>
+                    <div class="bold">Last Name/Surname</div>
+                    <input type="text" for="lname", name="name" />
+                </span>
+                <span style="padding-left: 20%;">
+                    <div class="bold">First Name</div>
+                    <input type="text" for="fname", name="name" />
+                </span>
+                <span style="padding-left: 20%;">
+                    <div class="bold">Middle Name</div>
+                    <input type="text" for="mname", name="name" />
+                </span>
+            </div>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span class="bold" style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+            <span style="color:red">*</span>
+            4. Select Parent name which is to be printed on the card
+            </br>
+            <span style="color: blue; font-weight: 400;">
+            (In case no option is provided then PAN card will be issued with father's name)
+            </span>
+            </span>
+            <span>
+                <label name="parents" for="father" value="father">Father Name</label>
+                <input type="radio" for="father", checked name="parents">
+                <label class="leftPadding" name="parents" for="mother" value="mother">Mother Name</label>
+                <input type="radio" for="mother", name="parents" />
+            </span>
+        </div>
+        <div class="grid-item">
+            <input type="checkbox" />
+        </div>
+        <div class="grid-item" style="display: flex;">
+            <span class="bold" style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+            <span style="color:red">*</span>
+            5. Date of Birth/Incorporation/Agreement/Partnership
+            </br>
+            or trust Deed/Formation of Body of Individuals/
+            </br>
+            Association of Persons
+            </span>
+            <span style="display: flex;">
+                <span>
+                    <div>DD</div>
+                    <select name="days" style="width: 40px; background-color: lightgray">
+                        <option value=""></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                </span>
+                <span>
+                    <div>MM</div>
+                    <select name="months" style="width: 40px; background-color: lightgray">
+                      <option value=""></option>
+                      <option value="Jan">Jan</option>
+                      <option value="Feb">Feb</option>
+                      <option value="Mar">Mar</option>
+                      <option value="Apr">Apr</option>
+                      <option value="May">May</option>
+                      <option value="Jun">Jun</option>
+                      <option value="Jul">Jul</option>
+                      <option value="Aug">Aug</option>
+                      <option value="Sep">Sep</option>
+                      <option value="Nov">Nov</option>
+                      <option value="Dec">Dec</option>
+                    </select>
+                </span>
+                <span>
+                    <div>YY</div>
+                    <input  style="width: 50px" type="number" />
+                </span>
+            </span>
+        </div>
+        <div class="grid-item"><input type="checkbox"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span style="color:red">*</span>
+                <span class="bold">Gender</span>
+            </span>
+            <span>
+                <label name="gender" for="male">Male</label>
+                <input type="radio" name="gender" value="Male" />
+                <label name="gender" for="female">Female</label>
+                <input type="radio" name="gender" value="Female" />
+                <label name="gender" for="female">TransGender</label>
+                <input type="radio" name="gender" value="TransGender" />
+            </span>
+        </div>
+        <div class="grid-item"><input type="checkbox"></div>
+        <div class="grid-item">
+            <span class="bold">7. Photo Mismatch</span>
+        </div>
+        <div class="grid-item"><input type="checkbox"></div>
+        <div class="grid-item"><span class="bold">8. Signature Mismatch</span></div>
+        <div class="grid-item"><input type="checkbox" checked></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span style="color:red">*</span>
+                <span class="bold">9. Address for Communication</span>
+            </span>
+            <span>
+                <label name="address" for="residential" value="residential">Residential</label>
+                <input type="radio" for="residential", name="address">
+                <label class="leftPadding" name="address" for="office" value="office">Office</label>
+                <input type="radio" for="office", name="address" />
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span class="bold">Office Name</span>
+                <span style="font-style: italic;">(to be filled only in case of office address)</span>
+            </span>
+            <span>
+                <input style="width: 300px" type="text" />
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span class="bold">Flat/Door/Block No.</span>
+            </span>
+            <span>
+                <input style="width: 250px" type="text" />
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span class="bold">Name of Premises/Building/Village.</span>
+            </span>
+            <span>
+                <input style="width: 250px" type="text" />
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span class="bold">Road/Street/Lane/Post Office</span>
+            </span>
+            <span>
+                <input style="width: 250px" type="text" />
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span class="bold">Area/Locality/Taluka/Sub-Division</span>
+            </span>
+            <span>
+                <input style="width: 250px" type="text" />
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span class="bold">Town/City/District</span>
+            </span>
+            <span>
+                <input style="width: 250px" type="text" />
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span class="bold">State/Union Territory</span>
+            </span>
+            <span>
+                <select name="state" style="width: 260px; background-color: lightgray">
+                    <option name="state"value="-- Please Select --">-- Please Select --</option>
+                </select>
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span class="bold">PIN</span>
+                <span style="font-style: italic;">(Indicating PIN is mandatory)</span>
+            </span>
+            <span>
+                <input style="width: 90px" type="text" />
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span class="bold">Country</span>
+            </span>
+            <span style="padding: 1px">
+                <select name="country" style="width: 500px; background-color: lightgray">
+                    <option name="country"value="-- Please Select --">-- Please Select --</option>
+                </select>
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span class="bold">Zip</span>
+            </span>
+            <span style="padding: 1px">
+                <input style="width: 90px; background-color: lightgray" type="text" />
+            </span>
+        </div>
+        <div class="grid-item"><input type="checkbox"></div>
+        <div class="grid-item">
+            <span class="bold">
+                10. If you desire to update your other address, give required details & <u>Submit proof of other address also.</u>
+            </span>
+        </div>
+        <div class="grid-item">
+            <input type="checkbox">
+        </div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span style="color:red">*</span>
+                <span class="bold">11. Telephone No.</span>
+            </span>
+            <span style="display: flex; flex-direction: column;">
+                <span>Country cod (ISD code)</span>
+                <select name="country" style="width: 500px; background-color: lightgray">
+                    <option name="country"value="-- Please Select --">-- Please Select --</option>
+                </select>
+                <span style="display: flex;border-bottom: 1px solid black;">
+                    <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                        <input type="radio" for="mobile", name="mobile" />
+                        <label name="mobile" for="mobile" value="mobile">Mobile No.</label>
+                    </span>
+                    <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                        <input type="radio" for="telephone", name="telephone" />
+                        <label name="telephone" for="telephone" value="telephone">Telephone No.</label>
+                    </span>
+                </span>
+                <span style="display: flex;">
+                    <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                        <div>
+                            Area/STD Code
+                        </div>
+                        <input style="width: 90px" type="text" />
+                    </span>
+                    <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                        <div>
+                           Telephone No./Mobile No.
+                        </div>
+                        <input style="width: 90px" type="text" />
+                    </span>
+                </span>
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item"  style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span class="bold">E-mail ID</span>
+            </span>
+            <span>
+                <input style="width: 250px;" type="text" />
+            </span>
+        </div>
+        <div class="grid-item">
+        </div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span>In case of a citizen of India, then</span>
+            </span>
+            <span>
+                <input type="radio" for="adhar", name="adhar">
+                <label name="adhar" for="adhar" value="adhar">Adhar</label>
+                <input type="radio" for="eid", name="eid" />
+                <label class="leftPadding" name="eid" for="eid" value="eid">EID</label>
+            </span>
+        </div>
+        <div class="grid-item">
+            <input type="checkbox" for="name" />
+        </div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span style="color:red">*</span>
+                <span class="bold">12. AADHAAR number :</span>
+            </span>
+            <span>
+                <div>
+                    <input style="width: 90px" type="text" />
+                </div>
+                <span class="bold" style="color: darkblue; font-style: italic;">
+                    In case AADHAAR number is provided, </br>
+                    then proof of AADHAAR along with supporting documents is to be submitted to NSDL
+                </span>
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span style="color:red">*</span>
+                <span>Name as per AADHAAR letter</span> </br>
+                <span>or</span> </br>
+                <span>as per the enrollment ID of AAdhaar application form</span>
+            </span>
+            <span style="display: flex; align-items: center; width: 48%">
+                <input style="width: 90%; height: 20px;" type="text" />
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span class="bold" style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                13. GSTN
+            </span>
+            <span>
+                <input style="width: 100px" type="text" />
+            </span>
+        </div>
+        <div class="grid-item">
+            <input type="checkbox" for="name" />
+        </div>
+        <div class="grid-item">
+            <span class="bold">
+                14. Mention other Permanent Account Numbers (PANS) is any, Inadvertently allotted to you. <u>Submit proof of surrendered PAN(s) along with the application.</u>
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span class="bold">PAN1</span>
+                <span><input style="width: 150px" type="text" />
+            </span>
+            <span>
+                <span class="bold">PAN2</span>
+                <span><input style="width: 150px" type="text" />
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="padding-right: 20px;width: 50%;border-right: 1px solid black;">
+                <span class="bold">PAN3</span>
+                <span><input style="width: 150px" type="text" />
+            </span>
+            <span>
+                <span class="bold">PAN4</span>
+                <span><input style="width: 150px" type="text" />
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            15. Verification
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="width: 100%">
+                I/We <input style="width: 40%" type="text" />, the applicant, in the capacity of
+                <select style="width: 250px; background-color: lightgray">
+                    <option value="-- Please Select --">-- Please Select --</option>
+                </select> do hereby declare that what is stated above is true to </br>
+                the best of my information and belief </br>
+                I have enclosed <input style="width: 40px" type="text" > (number of documents)
+                in support of proposed changes/corrections.
+            </span>
+        </div>
+        <div class="grid-item">
+        </div>
+        <div class="grid-item">
+            <span>
+                Place <input style="width: 300px" type="text"/>
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <div style="padding-left: 125px;">DD MM YYYYY</div>
+            <span>Verified today, the 18 -04 -2020</span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item" style="display: flex;">
+            <span style="width:100%">
+                I/We have enclosed </br>
+                <select name="agreement" style="width: 90%; background-color: lightgray">
+                    <option name="agreement"value="-- Please Select --">-- Please Select --</option>
+                </select> as proof </br>
+                of identity, <select name="agreement" style="width: 80%; background-color: lightgray">
+                    <option name="agreement"value="-- Please Select --">-- Please Select --</option>
+                </select> as proof of address, </br>
+                <select name="agreement" style="width: 75%; background-color: lightgray">
+                    <option name="agreement"value="-- Please Select --">-- Please Select --</option>
+                </select> as proof of date of birth </br>
+                and <select name="agreement" style="width: 20%; background-color: lightgray">
+                    <option name="agreement"value="-- Please Select --">-- Please Select --</option>
+                </select>> as proof of PAN allotted.
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <span class="bold">
+                Wheather you wish to have? 
+            </span>
+            <span style="padding-left: 40px;">
+                <input type="radio" name="idProof" for="pan" value='pan' checked/>
+                <label style="padding-right: 30px;" name="idProof" for="pan">Physical PAN Card & e-PAN Card</label>
+                <input type="radio" name="idProof" for="epan" value='epan' checked/>
+                <label name="idProof" for="epan">Only e-PAN Card</label>
+                <u style="font-style: italic; font-weight: bold; padding-left: 30px;">Fees Applicable</u>
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <span class="bold">
+                Other Details
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <span class="bold">
+                1. Depository Account Details
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <span class="bold">
+               <label style="padding-right: 10px;" name="dpid" for="dpid">DP ID: </label>
+               <input type="text" name="dpid" />
+               <label style="padding-right: 10px;"  name="clientId" for="clientId">Client ID: </label>
+               <input type="text" name="clientId" />
+            </span>
+        </div>
+        <div class="grid-item"></div>
+        <div class="grid-item">
+            <span class="bold">
+                2. Payment Details
+            </span>
+        </div>
+        <div class="grid-item"><input type="radio"></div>
+        <div class="grid-item">
+            <span class="bold">
+                Online Payment
+            </span>
+        </div>
+    </div>
+    <div>
+        <span style="font-size: 20px">For Paperless PAN Application: </span>
+        <input type="radio" for="yes" name="agreement" value="yes">
+        <label style="font-size: 20px" for="yes" name="agreement" value="yes">Yes</label>
+        <input type="radio" for="no" name="agreement" value="no">
+        <label style="font-size: 20px" for="no" name="agreement" value="no">NO</label>
+        <div>
+            <input type="radio" for="dsc" name="dsc" value="dsc">
+            <label style="font-size: 18px" for="dsc" name="dsc" value="dsc">DSC</label>
+            <select name="dsc" style="width: 260px; background-color: lightgray">
+                <option name="dsc"value="-- Please Select --">-- Please Select --</option>
+            </select>
+            <u style="color: #8a0019; padding-left: 20px;">Guidelines for DSC user</u>
+        </div>
+        <div style="display: flex; justify-content: space-between; width: 80%">
+            <span>Upload Photo</span>
+            <span><button>Choose file</button> No file chosen</span>
+            <span><span style="padding-right: 40px;">Upload Signature</span><button>Choose file</button> No file chosen</span>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <span>Upload Document</span>
+            <span><button>Choose file</button> No file chosen</span>
+            <span>OR</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px; margin-top: 10px;">
+            <span style="text-transform: uppercase; width: 40%">already upoaded photo</span>
+            <span style="width: 60%"><input type="text" style="width: 40%;" /></span>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span  style="text-transform: uppercase; width: 40%">already uploaded signature</span>
+            <span style="width: 60%"><input type="text"  style="width: 30%;" /></span>
+        </div>
+        <div style="display: flex; justify-content: space-between;margin-bottom: 10px;">
+            <span  style="text-transform: uppercase;width: 40%">already uploaded documents</span>
+            <span style="width: 60%"><input type="textarea" style="width: 60%; height: 250px" /></span>
+        </div>
+        <div style="display: flex; justify-content: center">
+            <input type="submit" /> 
+        </div>
+    </div>
+  </div>
+</body>
+</html>
